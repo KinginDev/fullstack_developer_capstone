@@ -383,11 +383,20 @@
         "documentation": {}
     },
     {
+        "label": "get_request",
+        "kind": 2,
+        "importPath": "server.djangoapp.restapis",
+        "description": "server.djangoapp.restapis",
+        "peekOfCode": "def get_request(endpoint, **kwargs):\n    params = \"\"\n    if(kwargs):\n        for key,value in kwargs.items():\n            params=params+key+\"=\"+value+\"&\"\n    request_url = backend_url+endpoint+\"?\"+params\n    print(\"GET from {} \".format(request_url))\n    try:\n        # Call get method of requests library with URL and parameters\n        response = requests.get(request_url)",
+        "detail": "server.djangoapp.restapis",
+        "documentation": {}
+    },
+    {
         "label": "backend_url",
         "kind": 5,
         "importPath": "server.djangoapp.restapis",
         "description": "server.djangoapp.restapis",
-        "peekOfCode": "backend_url = os.getenv(\n    'backend_url', default=\"http://localhost:3030\")\nsentiment_analyzer_url = os.getenv(\n    'sentiment_analyzer_url',\n    default=\"http://localhost:5050/\")\n# def get_request(endpoint, **kwargs):\n# Add code for get requests to back end\n# def analyze_review_sentiments(text):\n# request_url = sentiment_analyzer_url+\"analyze/\"+text\n# Add code for retrieving sentiments",
+        "peekOfCode": "backend_url = os.getenv(\n    'backend_url', default=\"http://localhost:3030\")\nsentiment_analyzer_url = os.getenv(\n    'sentiment_analyzer_url',\n    default=\"http://localhost:5050/\")\n# def get_request(endpoint, **kwargs):\n# Add code for get requests to back end\ndef get_request(endpoint, **kwargs):\n    params = \"\"\n    if(kwargs):",
         "detail": "server.djangoapp.restapis",
         "documentation": {}
     },
@@ -396,7 +405,7 @@
         "kind": 5,
         "importPath": "server.djangoapp.restapis",
         "description": "server.djangoapp.restapis",
-        "peekOfCode": "sentiment_analyzer_url = os.getenv(\n    'sentiment_analyzer_url',\n    default=\"http://localhost:5050/\")\n# def get_request(endpoint, **kwargs):\n# Add code for get requests to back end\n# def analyze_review_sentiments(text):\n# request_url = sentiment_analyzer_url+\"analyze/\"+text\n# Add code for retrieving sentiments\n# def post_review(data_dict):\n# Add code for posting review",
+        "peekOfCode": "sentiment_analyzer_url = os.getenv(\n    'sentiment_analyzer_url',\n    default=\"http://localhost:5050/\")\n# def get_request(endpoint, **kwargs):\n# Add code for get requests to back end\ndef get_request(endpoint, **kwargs):\n    params = \"\"\n    if(kwargs):\n        for key,value in kwargs.items():\n            params=params+key+\"=\"+value+\"&\"",
         "detail": "server.djangoapp.restapis",
         "documentation": {}
     },
