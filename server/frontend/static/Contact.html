@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Include Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Link the style sheet here -->
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/bootstrap.min.css" />
+
+    <style>
+      .divider {
+        border-left: 1px solid black;
+        height: 100%;
+        margin-top: 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <nav
+        class="navbar navbar-expand-lg navbar-light"
+        style="background-color: darkturquoise; height: 1in"
+      >
+        <div class="container-fluid">
+          <h2 style="padding-right: 5%">Dealerships</h2>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  style="font-size: larger"
+                  aria-current="page"
+                  href="/"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="font-size: larger" href="/about"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  style="font-size: larger"
+                  href="/contact"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container mt-5">
+      <div class="card">
+        <div class="card-body position-relative">
+          <div class="d-flex justify-content-center">
+            <img
+              src="/static/car_dealership.jpg"
+              class="header-image"
+              alt="Cars"
+            />
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-5 text-center">
+              <img
+                src="/static/user-headset.png"
+                class="header-image"
+                alt="Cars"
+              />
+            </div>
+            <div
+              class="col-md-1"
+              style="border-left: 2px solid black !important; height: 200px"
+            ></div>
+            <div class="col-md-6">
+              <p class="contact-info text-primary text-center">
+                <strong>Contact Customer Service</strong><br />
+                support@bestcars.com<br />
+                <strong>Contact our National Advertising team</strong><br />
+                NationalSales@bestcars.com<br />
+                <strong>Contact our Public Relations team</strong><br />
+                PR@bestcars.com<br />
+                <strong>Contact the bestcars.com offices</strong><br />
+                312-611-1111<br />
+                <strong>Become a bestcars.com car dealer</strong><br />
+                Visit growwithbestcars.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

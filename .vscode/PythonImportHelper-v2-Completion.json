@@ -1,0 +1,631 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "SentimentIntensityAnalyzer",
+        "importPath": "nltk.sentiment",
+        "description": "nltk.sentiment",
+        "isExtraImport": true,
+        "detail": "nltk.sentiment",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "django.conf.urls.static",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "csrf_exempt",
+        "importPath": "django.views.decorators.csrf",
+        "description": "django.views.decorators.csrf",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.csrf",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "TemplateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "server.djangoapp.microservices.app",
+        "description": "server.djangoapp.microservices.app",
+        "peekOfCode": "def home():\n    return \"Welcome to the Sentiment Analyzer. \\\n    Use /analyze/text to get the sentiment\"\n@app.get('/analyze/<input_txt>')\ndef analyze_sentiment(input_txt):\n    scores = sia.polarity_scores(input_txt)\n    print(scores)\n    pos = float(scores['pos'])\n    neg = float(scores['neg'])\n    neu = float(scores['neu'])",
+        "detail": "server.djangoapp.microservices.app",
+        "documentation": {}
+    },
+    {
+        "label": "analyze_sentiment",
+        "kind": 2,
+        "importPath": "server.djangoapp.microservices.app",
+        "description": "server.djangoapp.microservices.app",
+        "peekOfCode": "def analyze_sentiment(input_txt):\n    scores = sia.polarity_scores(input_txt)\n    print(scores)\n    pos = float(scores['pos'])\n    neg = float(scores['neg'])\n    neu = float(scores['neu'])\n    res = \"positive\"\n    print(\"pos neg nue \", pos, neg, neu)\n    if (neg > pos and neg > neu):\n        res = \"negative\"",
+        "detail": "server.djangoapp.microservices.app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "server.djangoapp.microservices.app",
+        "description": "server.djangoapp.microservices.app",
+        "peekOfCode": "app = Flask(\"Sentiment Analyzer\")\nsia = SentimentIntensityAnalyzer()\n@app.get('/')\ndef home():\n    return \"Welcome to the Sentiment Analyzer. \\\n    Use /analyze/text to get the sentiment\"\n@app.get('/analyze/<input_txt>')\ndef analyze_sentiment(input_txt):\n    scores = sia.polarity_scores(input_txt)\n    print(scores)",
+        "detail": "server.djangoapp.microservices.app",
+        "documentation": {}
+    },
+    {
+        "label": "sia",
+        "kind": 5,
+        "importPath": "server.djangoapp.microservices.app",
+        "description": "server.djangoapp.microservices.app",
+        "peekOfCode": "sia = SentimentIntensityAnalyzer()\n@app.get('/')\ndef home():\n    return \"Welcome to the Sentiment Analyzer. \\\n    Use /analyze/text to get the sentiment\"\n@app.get('/analyze/<input_txt>')\ndef analyze_sentiment(input_txt):\n    scores = sia.polarity_scores(input_txt)\n    print(scores)\n    pos = float(scores['pos'])",
+        "detail": "server.djangoapp.microservices.app",
+        "documentation": {}
+    },
+    {
+        "label": "DjangoappConfig",
+        "kind": 6,
+        "importPath": "server.djangoapp.apps",
+        "description": "server.djangoapp.apps",
+        "peekOfCode": "class DjangoappConfig(AppConfig):\n    name = 'djangoapp'",
+        "detail": "server.djangoapp.apps",
+        "documentation": {}
+    },
+    {
+        "label": "initiate",
+        "kind": 2,
+        "importPath": "server.djangoapp.populate",
+        "description": "server.djangoapp.populate",
+        "peekOfCode": "def initiate():\n    print(\"Populate not implemented. Add data manually\")",
+        "detail": "server.djangoapp.populate",
+        "documentation": {}
+    },
+    {
+        "label": "backend_url",
+        "kind": 5,
+        "importPath": "server.djangoapp.restapis",
+        "description": "server.djangoapp.restapis",
+        "peekOfCode": "backend_url = os.getenv(\n    'backend_url', default=\"http://localhost:3030\")\nsentiment_analyzer_url = os.getenv(\n    'sentiment_analyzer_url',\n    default=\"http://localhost:5050/\")\n# def get_request(endpoint, **kwargs):\n# Add code for get requests to back end\n# def analyze_review_sentiments(text):\n# request_url = sentiment_analyzer_url+\"analyze/\"+text\n# Add code for retrieving sentiments",
+        "detail": "server.djangoapp.restapis",
+        "documentation": {}
+    },
+    {
+        "label": "sentiment_analyzer_url",
+        "kind": 5,
+        "importPath": "server.djangoapp.restapis",
+        "description": "server.djangoapp.restapis",
+        "peekOfCode": "sentiment_analyzer_url = os.getenv(\n    'sentiment_analyzer_url',\n    default=\"http://localhost:5050/\")\n# def get_request(endpoint, **kwargs):\n# Add code for get requests to back end\n# def analyze_review_sentiments(text):\n# request_url = sentiment_analyzer_url+\"analyze/\"+text\n# Add code for retrieving sentiments\n# def post_review(data_dict):\n# Add code for posting review",
+        "detail": "server.djangoapp.restapis",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "server.djangoapp.urls",
+        "description": "server.djangoapp.urls",
+        "peekOfCode": "app_name = 'djangoapp'\nurlpatterns = [\n    # # path for registration\n    # path for login\n    # path(route='login', view=views.login_user, name='login'),\n    # path for dealer reviews view\n    # path for add a review view\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "detail": "server.djangoapp.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "server.djangoapp.urls",
+        "description": "server.djangoapp.urls",
+        "peekOfCode": "urlpatterns = [\n    # # path for registration\n    # path for login\n    # path(route='login', view=views.login_user, name='login'),\n    # path for dealer reviews view\n    # path for add a review view\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "detail": "server.djangoapp.urls",
+        "documentation": {}
+    },
+    {
+        "label": "login_user",
+        "kind": 2,
+        "importPath": "server.djangoapp.views",
+        "description": "server.djangoapp.views",
+        "peekOfCode": "def login_user(request):\n    # Get username and password from request.POST dictionary\n    data = json.loads(request.body)\n    username = data['userName']\n    password = data['password']\n    # Try to check if provide credential can be authenticated\n    user = authenticate(username=username, password=password)\n    data = {\"userName\": username}\n    if user is not None:\n        # If user is valid, call login method to login current user",
+        "detail": "server.djangoapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "server.djangoapp.views",
+        "description": "server.djangoapp.views",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n# Create your views here.\n# Create a `login_request` view to handle sign in request\n@csrf_exempt\ndef login_user(request):\n    # Get username and password from request.POST dictionary\n    data = json.loads(request.body)\n    username = data['userName']\n    password = data['password']\n    # Try to check if provide credential can be authenticated",
+        "detail": "server.djangoapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "server.djangoenv.bin.activate_this",
+        "description": "server.djangoenv.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.9/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": "server.djangoenv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "server.djangoenv.bin.activate_this",
+        "description": "server.djangoenv.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.9/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]",
+        "detail": "server.djangoenv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "server.djangoenv.bin.activate_this",
+        "description": "server.djangoenv.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.9/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "server.djangoenv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "server.djangoenv.bin.activate_this",
+        "description": "server.djangoenv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.9/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "server.djangoenv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "server.djangoenv.bin.activate_this",
+        "description": "server.djangoenv.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.9/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "server.djangoenv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "server.djangoenv.bin.activate_this",
+        "description": "server.djangoenv.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "server.djangoenv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "server.djangoenv.bin.activate_this",
+        "description": "server.djangoenv.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "server.djangoenv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "server.djangoenv.bin.activate_this",
+        "description": "server.djangoenv.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "server.djangoenv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "server.djangoproj.asgi",
+        "description": "server.djangoproj.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "server.djangoproj.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY =\\\n    'django-insecure-ccow$tz_=9%dxu4(0%^(z%nx32#s@(zt9$ih@)5l54yny)wm-0'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\n    'localhost','127.0.0.1'",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\n    'localhost','127.0.0.1'\n]\nCSRF_TRUSTED_ORIGINS = [\n    'http://localhost',\n]\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [],\n}",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "ALLOWED_HOSTS = [\n    'localhost','127.0.0.1'\n]\nCSRF_TRUSTED_ORIGINS = [\n    'http://localhost',\n]\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [],\n}\n# Application definition",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CSRF_TRUSTED_ORIGINS",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    'http://localhost',\n]\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [],\n}\n# Application definition\nINSTALLED_APPS = [\n    'djangoapp.apps.DjangoappConfig',\n    'django.contrib.admin',",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [],\n}\n# Application definition\nINSTALLED_APPS = [\n    'djangoapp.apps.DjangoappConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'djangoapp.apps.DjangoappConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nMIDDLEWARE = [",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'djangoproj.urls'\nTEMPLATES = [",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "ROOT_URLCONF = 'djangoproj.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [\n            os.path.join(BASE_DIR, 'frontend/static'),\n            ],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [\n            os.path.join(BASE_DIR, 'frontend/static'),\n            ],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'djangoproj.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\nAUTH_PASSWORD_VALIDATORS = [",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME':\n        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME':\n        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME':\n        'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')\nMEDIA_URL = '/media/'",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')\nMEDIA_URL = '/media/'\n# Default primary key field type",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_L10N",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSTATICFILES_DIRS = [\n     os.path.join(BASE_DIR, 'frontend/static'),\n]",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSTATICFILES_DIRS = [\n     os.path.join(BASE_DIR, 'frontend/static'),\n]",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSTATICFILES_DIRS = [\n     os.path.join(BASE_DIR, 'frontend/static'),\n]",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "MEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSTATICFILES_DIRS = [\n     os.path.join(BASE_DIR, 'frontend/static'),\n]",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSTATICFILES_DIRS = [\n     os.path.join(BASE_DIR, 'frontend/static'),\n]",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "server.djangoproj.settings",
+        "description": "server.djangoproj.settings",
+        "peekOfCode": "STATICFILES_DIRS = [\n     os.path.join(BASE_DIR, 'frontend/static'),\n]",
+        "detail": "server.djangoproj.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "server.djangoproj.urls",
+        "description": "server.djangoproj.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('about/', TemplateView.as_view(template_name=\"About.html\")),\n    path('contact/', TemplateView.as_view(template_name=\"Contact.html\")),\n    path('djangoapp/', include('djangoapp.urls')),\n    path('', TemplateView.as_view(template_name=\"Home.html\")),\n] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)",
+        "detail": "server.djangoproj.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "server.djangoproj.wsgi",
+        "description": "server.djangoproj.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "server.djangoproj.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "server.manage",
+        "description": "server.manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'djangoproj.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "server.manage",
+        "documentation": {}
+    }
+]
