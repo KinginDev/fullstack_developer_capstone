@@ -9,10 +9,11 @@
 # from datetime import datetime
 
 from django.http import JsonResponse
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 import logging
 import json
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.models import User
 # from .populate import initiate
 
 
@@ -39,13 +40,53 @@ def login_user(request):
     return JsonResponse(data)
 
 # Create a `logout_request` view to handle sign out request
-# def logout_request(request):
-# ...
+def logout_request(request):
+      # Check if the user is authenticated
+    if request.user.is_authenticated:
+        # Log the user out
+        logout(request)
+        # Return a JSON response indicating success
+        return JsonResponse({"status": "Logged out"})
+    else:
+        # If the user is not authenticated, return a different response
+        return JsonResponse({"status": "User not logged in"}, status=400)
+
 
 # Create a `registration` view to handle sign up request
 # @csrf_exempt
-# def registration(request):
-# ...
+def registration(request):
+    context = {}
+    
+    data = json.loads(request.body)
+    username = data['userName']
+    password = data['password']
+    firstName = data['firstName']
+    lastName = data['lastName']
+    email = data['email']
+    username_exists = False
+    email_exists = False
+    
+    try:
+        User.objects.get(username=username)
+        username_exists = True
+    except:
+            logger.debug("{} is a new user".format(username))
+            
+    if username_exists:
+        user = User.objects.create_user(
+            username=username,
+            password=password,
+            first_name=firstName,
+            last_name=lastName,
+            email=email
+        )
+        
+        login(request, user)
+        data = {"userName": username, "status": "Authenticated"}
+        return JsonResponse(data)
+    else: 
+        data = {"userName": username, "error": "User already exists"}
+        return JsonResponse(data, status=400)
 
 # # Update the `get_dealerships` view to render the index page with
 # a list of dealerships
