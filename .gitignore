@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+./server/database/.jshintignore
+./server/database/node_modules/
