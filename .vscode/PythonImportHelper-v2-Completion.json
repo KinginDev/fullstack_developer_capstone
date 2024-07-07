@@ -89,6 +89,15 @@
         "documentation": {}
     },
     {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -392,6 +401,24 @@
         "documentation": {}
     },
     {
+        "label": "analyze_review_sentiments",
+        "kind": 2,
+        "importPath": "server.djangoapp.restapis",
+        "description": "server.djangoapp.restapis",
+        "peekOfCode": "def analyze_review_sentiments(text):\n    request_url = sentiment_analyzer_url+\"analyze/\"+text\n    print(\"GET from {} \".format(request_url))\n    try:\n        # Call get method of requests library with URL and parameters\n        response = requests.get(request_url)\n        return response.json()\n    except Exception as err:\n        print(f\"Unexpected {err=}, {type(err)=}\")\n        print(\"Network exception occurred\")",
+        "detail": "server.djangoapp.restapis",
+        "documentation": {}
+    },
+    {
+        "label": "post_review",
+        "kind": 2,
+        "importPath": "server.djangoapp.restapis",
+        "description": "server.djangoapp.restapis",
+        "peekOfCode": "def post_review(data_dict):\n    request_url = backend_url+\"/insert_review\"\n    try:\n        response = requests.post(request_url,json=data_dict)\n        print(response.json())\n        return response.json()\n    except:\n        print(\"Network exception occurred\")",
+        "detail": "server.djangoapp.restapis",
+        "documentation": {}
+    },
+    {
         "label": "backend_url",
         "kind": 5,
         "importPath": "server.djangoapp.restapis",
@@ -414,7 +441,7 @@
         "kind": 5,
         "importPath": "server.djangoapp.urls",
         "description": "server.djangoapp.urls",
-        "peekOfCode": "app_name = 'djangoapp'\nurlpatterns = [\n    # # path for registration\n    # path for login\n    path(route='login', view=views.login_user, name='login'),\n    path(route='logout', view=views.logout_request, name='logout'),\n    path(route='get_cars', view=views.get_cars, name ='getcars'),\n    # path for dealer reviews view\n    # path for add a review view\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "app_name = 'djangoapp'\nurlpatterns = [\n    # # path for registration\n    # path for login\n    path(route='login', view=views.login_user, name='login'),\n    path(route='logout', view=views.logout_request, name='logout'),\n    path(route='get_cars', view=views.get_cars, name ='getcars'),\n    # path for dealer reviews view\n    path(route='get_dealers', view=views.get_dealerships, name='get_dealers'),\n    path(route='get_dealers/<str:state>', view=views.get_dealerships, name='get_dealers_by_state'),",
         "detail": "server.djangoapp.urls",
         "documentation": {}
     },
@@ -423,7 +450,7 @@
         "kind": 5,
         "importPath": "server.djangoapp.urls",
         "description": "server.djangoapp.urls",
-        "peekOfCode": "urlpatterns = [\n    # # path for registration\n    # path for login\n    path(route='login', view=views.login_user, name='login'),\n    path(route='logout', view=views.logout_request, name='logout'),\n    path(route='get_cars', view=views.get_cars, name ='getcars'),\n    # path for dealer reviews view\n    # path for add a review view\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    # # path for registration\n    # path for login\n    path(route='login', view=views.login_user, name='login'),\n    path(route='logout', view=views.logout_request, name='logout'),\n    path(route='get_cars', view=views.get_cars, name ='getcars'),\n    # path for dealer reviews view\n    path(route='get_dealers', view=views.get_dealerships, name='get_dealers'),\n    path(route='get_dealers/<str:state>', view=views.get_dealerships, name='get_dealers_by_state'),\n    path(route='dealer/<int:dealer_id>', view=views.get_dealer_details, name='dealer_details'),",
         "detail": "server.djangoapp.urls",
         "documentation": {}
     },
@@ -451,6 +478,42 @@
         "importPath": "server.djangoapp.views",
         "description": "server.djangoapp.views",
         "peekOfCode": "def registration(request):\n    context = {}\n    data = json.loads(request.body)\n    username = data['userName']\n    password = data['password']\n    firstName = data['firstName']\n    lastName = data['lastName']\n    email = data['email']\n    username_exists = False\n    email_exists = False",
+        "detail": "server.djangoapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "get_dealerships",
+        "kind": 2,
+        "importPath": "server.djangoapp.views",
+        "description": "server.djangoapp.views",
+        "peekOfCode": "def get_dealerships(request, state=\"All\"):\n    if(state != \"All\"):\n        endpoint = \"/fetchDealers/\"+state\n    else:\n        endpoint = \"/fetchDealers/\"\n    dealerships = get_request(endpoint)\n    return JsonResponse({\"status\":200,\"dealers\":dealerships})\n# Create a `get_dealer_reviews` view to render the reviews of a dealer\ndef get_dealer_reviews(request, dealer_id):\n    # if dealer id has been provided",
+        "detail": "server.djangoapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "get_dealer_reviews",
+        "kind": 2,
+        "importPath": "server.djangoapp.views",
+        "description": "server.djangoapp.views",
+        "peekOfCode": "def get_dealer_reviews(request, dealer_id):\n    # if dealer id has been provided\n    if(dealer_id):\n        endpoint = \"/fetchReviews/dealer/\"+str(dealer_id)\n        reviews = get_request(endpoint)\n        for review_detail in reviews:\n            response = analyze_review_sentiments(review_detail['review'])\n            print(response)\n            review_detail['sentiment'] = response['sentiment']\n        return JsonResponse({\"status\":200,\"reviews\":reviews})",
+        "detail": "server.djangoapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "get_dealer_details",
+        "kind": 2,
+        "importPath": "server.djangoapp.views",
+        "description": "server.djangoapp.views",
+        "peekOfCode": "def get_dealer_details(request, dealer_id):\n    if(dealer_id):\n        endpoint = \"/fetchDealer/\"+str(dealer_id)\n        dealership = get_request(endpoint)\n        return JsonResponse({\"status\":200,\"dealer\":dealership})\n    else:\n        return JsonResponse({\"status\":400,\"message\":\"Bad Request\"})\n# Create a `add_review` view to submit a review\n# def add_review(request):\ndef add_review(request):",
+        "detail": "server.djangoapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "add_review",
+        "kind": 2,
+        "importPath": "server.djangoapp.views",
+        "description": "server.djangoapp.views",
+        "peekOfCode": "def add_review(request):\n    if(request.user.is_anonymous == False):\n        data = json.loads(request.body)\n        try:\n            response = post_review(data)\n            return JsonResponse({\"status\":200})\n        except:\n            return JsonResponse({\"status\":401,\"message\":\"Error in posting review\"})\n    else:\n        return JsonResponse({\"status\":403,\"message\":\"Unauthorized\"})",
         "detail": "server.djangoapp.views",
         "documentation": {}
     },
@@ -558,7 +621,7 @@
         "kind": 5,
         "importPath": "server.djangoproj.settings",
         "description": "server.djangoproj.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY =\\\n    'django-insecure-ccow$tz_=9%dxu4(0%^(z%nx32#s@(zt9$ih@)5l54yny)wm-0'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\n    'localhost','127.0.0.1'",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY =\\\n    'django-insecure-ccow$tz_=9%dxu4(0%^(z%nx32#s@(zt9$ih@)5l54yny)wm-0'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\n    'localhost','127.0.0.1','boluwajimaxw-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/'",
         "detail": "server.djangoproj.settings",
         "documentation": {}
     },
@@ -567,7 +630,7 @@
         "kind": 5,
         "importPath": "server.djangoproj.settings",
         "description": "server.djangoproj.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\n    'localhost','127.0.0.1'\n]\nCSRF_TRUSTED_ORIGINS = [\n    'http://localhost',\n]\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [],\n}",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\n    'localhost','127.0.0.1','boluwajimaxw-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/'\n]\nCSRF_TRUSTED_ORIGINS = [\n    'http://localhost','https://boluwajimaxw-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/'\n]\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [],\n}",
         "detail": "server.djangoproj.settings",
         "documentation": {}
     },
@@ -576,7 +639,7 @@
         "kind": 5,
         "importPath": "server.djangoproj.settings",
         "description": "server.djangoproj.settings",
-        "peekOfCode": "ALLOWED_HOSTS = [\n    'localhost','127.0.0.1'\n]\nCSRF_TRUSTED_ORIGINS = [\n    'http://localhost',\n]\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [],\n}\n# Application definition",
+        "peekOfCode": "ALLOWED_HOSTS = [\n    'localhost','127.0.0.1','boluwajimaxw-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/'\n]\nCSRF_TRUSTED_ORIGINS = [\n    'http://localhost','https://boluwajimaxw-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/'\n]\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [],\n}\n# Application definition",
         "detail": "server.djangoproj.settings",
         "documentation": {}
     },
@@ -585,7 +648,7 @@
         "kind": 5,
         "importPath": "server.djangoproj.settings",
         "description": "server.djangoproj.settings",
-        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    'http://localhost',\n]\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [],\n}\n# Application definition\nINSTALLED_APPS = [\n    'djangoapp.apps.DjangoappConfig',\n    'django.contrib.admin',",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    'http://localhost','https://boluwajimaxw-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/'\n]\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [],\n}\n# Application definition\nINSTALLED_APPS = [\n    'djangoapp.apps.DjangoappConfig',\n    'django.contrib.admin',",
         "detail": "server.djangoproj.settings",
         "documentation": {}
     },
@@ -765,7 +828,7 @@
         "kind": 5,
         "importPath": "server.djangoproj.urls",
         "description": "server.djangoproj.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('about/', TemplateView.as_view(template_name=\"About.html\")),\n    path('contact/', TemplateView.as_view(template_name=\"Contact.html\")),\n    path('djangoapp/', include('djangoapp.urls')),\n    path('login', TemplateView.as_view(template_name='index.html')),\n    path('register', TemplateView.as_view(template_name='index.html')),\n    path('', TemplateView.as_view(template_name=\"Home.html\")),\n] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('about/', TemplateView.as_view(template_name=\"About.html\")),\n    path('contact/', TemplateView.as_view(template_name=\"Contact.html\")),\n    path('djangoapp/', include('djangoapp.urls')),\n    path('login', TemplateView.as_view(template_name='index.html')),\n    path('register', TemplateView.as_view(template_name='index.html')),\n    path('dealers/', TemplateView.as_view(template_name=\"index.html\")),\n    path('dealer/<int:dealer_id>',TemplateView.as_view(template_name=\"index.html\")),\n    path('postreview/<int:dealer_id>',TemplateView.as_view(template_name=\"index.html\")),",
         "detail": "server.djangoproj.urls",
         "documentation": {}
     },
