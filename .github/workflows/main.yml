@@ -26,12 +26,12 @@ jobs:
       - name: Change directory to djangoapp and run linter
         run: |
             cd server/djangoapp
-            pylint --load-plugins=django_pylint *.py
+            pylint --load-plugins=pylint_django *.py
         
       - name: Change directory to djangproj and run linter
         run: |
             cd server/djangoproj
-            pylint --load-plugins=django_pylint *.py
+            pylint --load-plugins=pylint_django *.py
      
   lint_js:
     name: Lint JavaScript Files
