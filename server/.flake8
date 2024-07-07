@@ -1,0 +1,33 @@
+# Exclude specific directories or files
+exclude = 
+    .git,
+    __pycache__,
+    old,
+    build,
+    dist,
+    migrations,
+    ./server/frontend*,
+    ./server/djangoenv*,
+    ./server/database*,
+
+# Maximum allowed line length
+max-line-length = 1000
+
+# Ignore specific error codes (customize based on your needs)
+ignore =
+    E203,  # Whitespace before ':'
+    E266,  # Too many leading '#' for block comment
+    E501,  # Line too long
+    W503,  # Line break before binary operator
+
+# Show the source code for each error (optional)
+show-source = True
+
+# Statistics about violations (optional)
+statistics = True
+
+# Enable specific plugins (if any)
+enable-extensions = G
+
+# Path to the project source code (if needed)
+# paths = src

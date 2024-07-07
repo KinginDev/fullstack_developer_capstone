@@ -15,3 +15,5 @@ disable =
     W0612, # Unused variable
     C0415,
     E5110,
+    E231,
+    E302
