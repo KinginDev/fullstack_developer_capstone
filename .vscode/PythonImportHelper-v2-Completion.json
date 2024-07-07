@@ -405,7 +405,7 @@
         "kind": 2,
         "importPath": "server.djangoapp.restapis",
         "description": "server.djangoapp.restapis",
-        "peekOfCode": "def analyze_review_sentiments(text):\n    request_url = sentiment_analyzer_url+\"analyze/\"+text\n    print(\"GET from {} \".format(request_url))\n    try:\n        # Call get method of requests library with URL and parameters\n        response = requests.get(request_url)\n        return response.json()\n    except Exception as err:\n        print(f\"Unexpected {err=}, {type(err)=}\")\n        print(\"Network exception occurred\")",
+        "peekOfCode": "def analyze_review_sentiments(text):\n    request_url = sentiment_analyzer_url+\"/analyze/\"+text\n    print(\"GET from {} \".format(request_url))\n    try:\n        # Call get method of requests library with URL and parameters\n        response = requests.get(request_url)\n        print(response.json())\n        return response.json()\n    except Exception as err:\n        print(f\"Unexpected {err=}, {type(err)=}\")",
         "detail": "server.djangoapp.restapis",
         "documentation": {}
     },
