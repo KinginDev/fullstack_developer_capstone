@@ -1,7 +1,8 @@
-# Uncomment the following imports before adding the Model code
-
+"""
+Django app models module
+"""
 from django.db import models
-from django.utils.timezone import now
+from django.contrib.auth import get_user_model
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.utils.translation import gettext_lazy as _
 
@@ -12,12 +13,18 @@ from django.utils.translation import gettext_lazy as _
 # - Description
 # - Any other fields you would like to include in car make model
 # - __str__ method to print a car make object
+
+
+User = get_user_model()
 class CarMake(models.Model):
+    """
+    Car Make class
+    """
     name = models.CharField(max_length=100)
     description = models.TextField()
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 # <HINT> Create a Car Model model `class CarModel(models.Model):`:
 # - Many-To-One relationship to Car Make model (One Car Make has many
 # Car Models, using ForeignKey field)
@@ -28,6 +35,9 @@ class CarMake(models.Model):
 # - Any other fields you would like to include in car model
 # - __str__ method to print a car make object
 class CarModel(models.Model):
+    """
+    Car Model class
+    """
     car_make = models.ForeignKey(CarMake, on_delete=models.CASCADE)
     dealer_id = models.IntegerField(default=0)
     name = models.CharField( max_length=50)
@@ -45,4 +55,4 @@ class CarModel(models.Model):
         MaxValueValidator(2023)])
 
     def __str__(self):
-        return self.name
+        return str(self.name)

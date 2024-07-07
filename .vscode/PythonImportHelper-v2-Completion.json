@@ -57,159 +57,11 @@
         "documentation": {}
     },
     {
-        "label": "now",
-        "importPath": "django.utils.timezone",
-        "description": "django.utils.timezone",
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
         "isExtraImport": true,
-        "detail": "django.utils.timezone",
-        "documentation": {}
-    },
-    {
-        "label": "MaxValueValidator",
-        "importPath": "django.core.validators",
-        "description": "django.core.validators",
-        "isExtraImport": true,
-        "detail": "django.core.validators",
-        "documentation": {}
-    },
-    {
-        "label": "MinValueValidator",
-        "importPath": "django.core.validators",
-        "description": "django.core.validators",
-        "isExtraImport": true,
-        "detail": "django.core.validators",
-        "documentation": {}
-    },
-    {
-        "label": "gettext_lazy",
-        "importPath": "django.utils.translation",
-        "description": "django.utils.translation",
-        "isExtraImport": true,
-        "detail": "django.utils.translation",
-        "documentation": {}
-    },
-    {
-        "label": "requests",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "requests",
-        "description": "requests",
-        "detail": "requests",
-        "documentation": {}
-    },
-    {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
-        "label": "load_dotenv",
-        "importPath": "dotenv",
-        "description": "dotenv",
-        "isExtraImport": true,
-        "detail": "dotenv",
-        "documentation": {}
-    },
-    {
-        "label": "django.conf.urls.static",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "django.conf.urls.static",
-        "description": "django.conf.urls.static",
-        "detail": "django.conf.urls.static",
-        "documentation": {}
-    },
-    {
-        "label": "static",
-        "importPath": "django.conf.urls.static",
-        "description": "django.conf.urls.static",
-        "isExtraImport": true,
-        "detail": "django.conf.urls.static",
-        "documentation": {}
-    },
-    {
-        "label": "static",
-        "importPath": "django.conf.urls.static",
-        "description": "django.conf.urls.static",
-        "isExtraImport": true,
-        "detail": "django.conf.urls.static",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "django.views.generic",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "django.views.generic",
-        "description": "django.views.generic",
-        "detail": "django.views.generic",
-        "documentation": {}
-    },
-    {
-        "label": "TemplateView",
-        "importPath": "django.views.generic",
-        "description": "django.views.generic",
-        "isExtraImport": true,
-        "detail": "django.views.generic",
-        "documentation": {}
-    },
-    {
-        "label": "TemplateView",
-        "importPath": "django.views.generic",
-        "description": "django.views.generic",
-        "isExtraImport": true,
-        "detail": "django.views.generic",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "JsonResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
+        "detail": "django.contrib.auth",
         "documentation": {}
     },
     {
@@ -237,6 +89,120 @@
         "documentation": {}
     },
     {
+        "label": "MaxValueValidator",
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "isExtraImport": true,
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "MinValueValidator",
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "isExtraImport": true,
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "gettext_lazy",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
+        "documentation": {}
+    },
+    {
+        "label": "gettext_lazy",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "logging",
         "kind": 6,
         "isExtraImport": true,
@@ -246,19 +212,19 @@
         "documentation": {}
     },
     {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
         "label": "csrf_exempt",
         "importPath": "django.views.decorators.csrf",
         "description": "django.views.decorators.csrf",
         "isExtraImport": true,
         "detail": "django.views.decorators.csrf",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
         "documentation": {}
     },
     {
@@ -293,6 +259,14 @@
         "description": "pathlib",
         "isExtraImport": true,
         "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "TemplateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
         "documentation": {}
     },
     {
@@ -360,7 +334,7 @@
         "kind": 6,
         "importPath": "server.djangoapp.apps",
         "description": "server.djangoapp.apps",
-        "peekOfCode": "class DjangoappConfig(AppConfig):\n    name = 'djangoapp'",
+        "peekOfCode": "class DjangoappConfig(AppConfig):\n    \"\"\"\n    Django app config class\n    \"\"\"\n    name = 'djangoapp'",
         "detail": "server.djangoapp.apps",
         "documentation": {}
     },
@@ -369,7 +343,7 @@
         "kind": 6,
         "importPath": "server.djangoapp.models",
         "description": "server.djangoapp.models",
-        "peekOfCode": "class CarMake(models.Model):\n    name = models.CharField(max_length=100)\n    description = models.TextField()\n    def __str__(self):\n        return self.name\n# <HINT> Create a Car Model model `class CarModel(models.Model):`:\n# - Many-To-One relationship to Car Make model (One Car Make has many\n# Car Models, using ForeignKey field)\n# - Name\n# - Type (CharField with a choices argument to provide limited choices",
+        "peekOfCode": "class CarMake(models.Model):\n    \"\"\"\n    Car Make class\n    \"\"\"\n    name = models.CharField(max_length=100)\n    description = models.TextField()\n    def __str__(self):\n        return str(self.name)\n# <HINT> Create a Car Model model `class CarModel(models.Model):`:\n# - Many-To-One relationship to Car Make model (One Car Make has many",
         "detail": "server.djangoapp.models",
         "documentation": {}
     },
@@ -378,7 +352,16 @@
         "kind": 6,
         "importPath": "server.djangoapp.models",
         "description": "server.djangoapp.models",
-        "peekOfCode": "class CarModel(models.Model):\n    car_make = models.ForeignKey(CarMake, on_delete=models.CASCADE)\n    dealer_id = models.IntegerField(default=0)\n    name = models.CharField( max_length=50)\n    CAR_TYPES = [\n        ('SEDAN', 'Sedan'),\n            ('SUV', 'SUV'),\n            ('WAGON', 'Wagon'),\n            ('SPORT', 'Sport'),\n            ('OTHER', 'Other')",
+        "peekOfCode": "class CarModel(models.Model):\n    \"\"\"\n    Car Model class\n    \"\"\"\n    car_make = models.ForeignKey(CarMake, on_delete=models.CASCADE)\n    dealer_id = models.IntegerField(default=0)\n    name = models.CharField( max_length=50)\n    CAR_TYPES = [\n        ('SEDAN', 'Sedan'),\n            ('SUV', 'SUV'),",
+        "detail": "server.djangoapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 5,
+        "importPath": "server.djangoapp.models",
+        "description": "server.djangoapp.models",
+        "peekOfCode": "User = get_user_model()\nclass CarMake(models.Model):\n    \"\"\"\n    Car Make class\n    \"\"\"\n    name = models.CharField(max_length=100)\n    description = models.TextField()\n    def __str__(self):\n        return str(self.name)\n# <HINT> Create a Car Model model `class CarModel(models.Model):`:",
         "detail": "server.djangoapp.models",
         "documentation": {}
     },
@@ -387,7 +370,7 @@
         "kind": 2,
         "importPath": "server.djangoapp.populate",
         "description": "server.djangoapp.populate",
-        "peekOfCode": "def initiate():\n    car_make_data = [\n        {\"name\":\"NISSAN\", \"description\":\"Great cars. Japanese technology\"},\n        {\"name\":\"Mercedes\", \"description\":\"Great cars. German technology\"},\n        {\"name\":\"Audi\", \"description\":\"Great cars. German technology\"},\n        {\"name\":\"Kia\", \"description\":\"Great cars. Korean technology\"},\n        {\"name\":\"Toyota\", \"description\":\"Great cars. Japanese technology\"},\n    ]\n    car_make_instances = []\n    for data in car_make_data:",
+        "peekOfCode": "def initiate():\n    \"\"\"\n    Initialize the database with the following data\n    \"\"\"\n    car_make_data = [\n      {\"name\":\"NISSAN\", \"description\":\"Great cars. Japanese technology\"},\n      {\"name\":\"Mercedes\", \"description\":\"Great cars. German technology\"},\n      {\"name\":\"Audi\", \"description\":\"Great cars. German technology\"},\n      {\"name\":\"Kia\", \"description\":\"Great cars. Korean technology\"},\n      {\"name\":\"Toyota\", \"description\":\"Great cars. Japanese technology\"},",
         "detail": "server.djangoapp.populate",
         "documentation": {}
     },
@@ -396,7 +379,7 @@
         "kind": 2,
         "importPath": "server.djangoapp.restapis",
         "description": "server.djangoapp.restapis",
-        "peekOfCode": "def get_request(endpoint, **kwargs):\n    params = \"\"\n    if(kwargs):\n        for key,value in kwargs.items():\n            params=params+key+\"=\"+value+\"&\"\n    request_url = backend_url+endpoint+\"?\"+params\n    print(\"GET from {} \".format(request_url))\n    try:\n        # Call get method of requests library with URL and parameters\n        response = requests.get(request_url)",
+        "peekOfCode": "def get_request(endpoint, **kwargs):\n    \"\"\"\n    This function sends a GET request to the backend\n    \"\"\"\n    params = \"\"\n    if kwargs:\n        for key,value in kwargs.items():\n            params=params+key+\"=\"+value+\"&\"\n    request_url = backend_url+endpoint+\"?\"+params\n    print(f\"GET from {request_url} \")",
         "detail": "server.djangoapp.restapis",
         "documentation": {}
     },
@@ -405,7 +388,7 @@
         "kind": 2,
         "importPath": "server.djangoapp.restapis",
         "description": "server.djangoapp.restapis",
-        "peekOfCode": "def analyze_review_sentiments(text):\n    request_url = sentiment_analyzer_url+\"/analyze/\"+text\n    print(\"GET from {} \".format(request_url))\n    try:\n        # Call get method of requests library with URL and parameters\n        response = requests.get(request_url)\n        print(response.json())\n        return response.json()\n    except Exception as err:\n        print(f\"Unexpected {err=}, {type(err)=}\")",
+        "peekOfCode": "def analyze_review_sentiments(text):\n    \"\"\"\n    This function sends a GET request to the sentiment analyzer\n    \"\"\"\n    request_url = sentiment_analyzer_url+\"/analyze/\"+text\n    print(f\"GET from {request_url} \")\n    try:\n        # Call get method of requests library with URL and parameters\n        response = requests.get(request_url,timeout=5)\n        print(response.json())",
         "detail": "server.djangoapp.restapis",
         "documentation": {}
     },
@@ -414,7 +397,7 @@
         "kind": 2,
         "importPath": "server.djangoapp.restapis",
         "description": "server.djangoapp.restapis",
-        "peekOfCode": "def post_review(data_dict):\n    request_url = backend_url+\"/insert_review\"\n    try:\n        response = requests.post(request_url,json=data_dict)\n        print(response.json())\n        return response.json()\n    except:\n        print(\"Network exception occurred\")",
+        "peekOfCode": "def post_review(data_dict):\n    \"\"\"\n    This function sends a POST request to the backend\n    \"\"\"\n    request_url = backend_url+\"/insert_review\"\n    try:\n        response = requests.post(request_url,json=data_dict,timeout=5)\n        print(response.json())\n        return response.json()\n    except requests.exceptions.RequestException :",
         "detail": "server.djangoapp.restapis",
         "documentation": {}
     },
@@ -423,7 +406,7 @@
         "kind": 5,
         "importPath": "server.djangoapp.restapis",
         "description": "server.djangoapp.restapis",
-        "peekOfCode": "backend_url = os.getenv(\n    'backend_url', default=\"http://localhost:3030\")\nsentiment_analyzer_url = os.getenv(\n    'sentiment_analyzer_url',\n    default=\"http://localhost:5050/\")\n# def get_request(endpoint, **kwargs):\n# Add code for get requests to back end\ndef get_request(endpoint, **kwargs):\n    params = \"\"\n    if(kwargs):",
+        "peekOfCode": "backend_url = os.getenv(\n    'backend_url', default=\"http://localhost:3030\")\nsentiment_analyzer_url = os.getenv(\n    'sentiment_analyzer_url',\n    default=\"http://localhost:5050/\")\n# def get_request(endpoint, **kwargs):\n# Add code for get requests to back end\ndef get_request(endpoint, **kwargs):\n    \"\"\"\n    This function sends a GET request to the backend",
         "detail": "server.djangoapp.restapis",
         "documentation": {}
     },
@@ -432,16 +415,16 @@
         "kind": 5,
         "importPath": "server.djangoapp.restapis",
         "description": "server.djangoapp.restapis",
-        "peekOfCode": "sentiment_analyzer_url = os.getenv(\n    'sentiment_analyzer_url',\n    default=\"http://localhost:5050/\")\n# def get_request(endpoint, **kwargs):\n# Add code for get requests to back end\ndef get_request(endpoint, **kwargs):\n    params = \"\"\n    if(kwargs):\n        for key,value in kwargs.items():\n            params=params+key+\"=\"+value+\"&\"",
+        "peekOfCode": "sentiment_analyzer_url = os.getenv(\n    'sentiment_analyzer_url',\n    default=\"http://localhost:5050/\")\n# def get_request(endpoint, **kwargs):\n# Add code for get requests to back end\ndef get_request(endpoint, **kwargs):\n    \"\"\"\n    This function sends a GET request to the backend\n    \"\"\"\n    params = \"\"",
         "detail": "server.djangoapp.restapis",
         "documentation": {}
     },
     {
-        "label": "app_name",
+        "label": "APP_NAME",
         "kind": 5,
         "importPath": "server.djangoapp.urls",
         "description": "server.djangoapp.urls",
-        "peekOfCode": "app_name = 'djangoapp'\nurlpatterns = [\n    # # path for registration\n    # path for login\n    path(route='login', view=views.login_user, name='login'),\n    path(route='logout', view=views.logout_request, name='logout'),\n    path(route='get_cars', view=views.get_cars, name ='getcars'),\n    # path for dealer reviews view\n    path(route='get_dealers', view=views.get_dealerships, name='get_dealers'),\n    path(route='get_dealers/<str:state>', view=views.get_dealerships, name='get_dealers_by_state'),",
+        "peekOfCode": "APP_NAME = 'djangoapp'\nurlpatterns = [\n    # # path for registration\n    # path for login\n    path(route='login',\n         view=views.login_user, name='login'),\n    path(route='logout',\n         view=views.logout_request, name='logout'),\n    path(route='get_cars',\n         view=views.get_cars, name ='getcars'),",
         "detail": "server.djangoapp.urls",
         "documentation": {}
     },
@@ -450,7 +433,7 @@
         "kind": 5,
         "importPath": "server.djangoapp.urls",
         "description": "server.djangoapp.urls",
-        "peekOfCode": "urlpatterns = [\n    # # path for registration\n    # path for login\n    path(route='login', view=views.login_user, name='login'),\n    path(route='logout', view=views.logout_request, name='logout'),\n    path(route='get_cars', view=views.get_cars, name ='getcars'),\n    # path for dealer reviews view\n    path(route='get_dealers', view=views.get_dealerships, name='get_dealers'),\n    path(route='get_dealers/<str:state>', view=views.get_dealerships, name='get_dealers_by_state'),\n    path(route='dealer/<int:dealer_id>', view=views.get_dealer_details, name='dealer_details'),",
+        "peekOfCode": "urlpatterns = [\n    # # path for registration\n    # path for login\n    path(route='login',\n         view=views.login_user, name='login'),\n    path(route='logout',\n         view=views.logout_request, name='logout'),\n    path(route='get_cars',\n         view=views.get_cars, name ='getcars'),\n    # path for dealer reviews view",
         "detail": "server.djangoapp.urls",
         "documentation": {}
     },
@@ -459,7 +442,7 @@
         "kind": 2,
         "importPath": "server.djangoapp.views",
         "description": "server.djangoapp.views",
-        "peekOfCode": "def login_user(request):\n    # Get username and password from request.POST dictionary\n    data = json.loads(request.body)\n    username = data['userName']\n    password = data['password']\n    # Try to check if provide credential can be authenticated\n    user = authenticate(username=username, password=password)\n    data = {\"userName\": username}\n    if user is not None:\n        # If user is valid, call login method to login current user",
+        "peekOfCode": "def login_user(request):\n    \"\"\"\n    This view handles login requests\n    \"\"\"\n    # Get username and password from request.POST dictionary\n    data = json.loads(request.body)\n    username = data['userName']\n    password = data['password']\n    # Try to check if provide credential can be authenticated\n    user = authenticate(username=username, password=password)",
         "detail": "server.djangoapp.views",
         "documentation": {}
     },
@@ -468,7 +451,7 @@
         "kind": 2,
         "importPath": "server.djangoapp.views",
         "description": "server.djangoapp.views",
-        "peekOfCode": "def logout_request(request):\n      # Check if the user is authenticated\n    if request.user.is_authenticated:\n        # Log the user out\n        logout(request)\n        # Return a JSON response indicating success\n        return JsonResponse({\"status\": \"Logged out\"})\n    else:\n        # If the user is not authenticated, return a different response\n        return JsonResponse({\"status\": \"User not logged in\"}, status=400)",
+        "peekOfCode": "def logout_request(request):\n    \"\"\"\n    This view handles logout requests\n    \"\"\"\n      # Check if the user is authenticated\n    if request.user.is_authenticated:\n        # Log the user out\n        logout(request)\n        # Return a JSON response indicating success\n        return JsonResponse({\"status\": \"Logged out\"})",
         "detail": "server.djangoapp.views",
         "documentation": {}
     },
@@ -477,7 +460,7 @@
         "kind": 2,
         "importPath": "server.djangoapp.views",
         "description": "server.djangoapp.views",
-        "peekOfCode": "def registration(request):\n    context = {}\n    data = json.loads(request.body)\n    username = data['userName']\n    password = data['password']\n    firstName = data['firstName']\n    lastName = data['lastName']\n    email = data['email']\n    username_exists = False\n    email_exists = False",
+        "peekOfCode": "def registration(request):\n    \"\"\"\n    This view handles registration requests\n    \"\"\"\n    context = {}\n    data = json.loads(request.body)\n    username = data['userName']\n    password = data['password']\n    first_name = data['firstName']\n    last_name = data['lastName']",
         "detail": "server.djangoapp.views",
         "documentation": {}
     },
@@ -486,7 +469,7 @@
         "kind": 2,
         "importPath": "server.djangoapp.views",
         "description": "server.djangoapp.views",
-        "peekOfCode": "def get_dealerships(request, state=\"All\"):\n    if(state != \"All\"):\n        endpoint = \"/fetchDealers/\"+state\n    else:\n        endpoint = \"/fetchDealers/\"\n    dealerships = get_request(endpoint)\n    return JsonResponse({\"status\":200,\"dealers\":dealerships})\n# Create a `get_dealer_reviews` view to render the reviews of a dealer\ndef get_dealer_reviews(request, dealer_id):\n    # if dealer id has been provided",
+        "peekOfCode": "def get_dealerships(request, state=\"All\"):\n    \"\"\"\n    This view handles fetching dealerships from the database microservice\n    \"\"\"\n    if state != \"All\":\n        endpoint = \"/fetchDealers/\"+state\n    else:\n        endpoint = \"/fetchDealers/\"\n    dealerships = get_request(endpoint)\n    return JsonResponse({\"status\":200,\"dealers\":dealerships})",
         "detail": "server.djangoapp.views",
         "documentation": {}
     },
@@ -495,7 +478,7 @@
         "kind": 2,
         "importPath": "server.djangoapp.views",
         "description": "server.djangoapp.views",
-        "peekOfCode": "def get_dealer_reviews(request, dealer_id):\n    # if dealer id has been provided\n    if(dealer_id):\n        endpoint = \"/fetchReviews/dealer/\"+str(dealer_id)\n        reviews = get_request(endpoint)\n        for review_detail in reviews:\n            response = analyze_review_sentiments(review_detail['review'])\n            print(response)\n            review_detail['sentiment'] = response['sentiment']\n        return JsonResponse({\"status\":200,\"reviews\":reviews})",
+        "peekOfCode": "def get_dealer_reviews(request,dealer_id):\n    \"\"\"\n    This view handles fetching reviews of a dealer from the database microservice\n    \"\"\"\n    # if dealer id has been provided\n    if dealer_id:\n        endpoint = \"/fetchReviews/dealer/\"+str(dealer_id)\n        reviews = get_request(endpoint)\n        for review_detail in reviews:\n            response = analyze_review_sentiments(review_detail['review'])",
         "detail": "server.djangoapp.views",
         "documentation": {}
     },
@@ -504,7 +487,7 @@
         "kind": 2,
         "importPath": "server.djangoapp.views",
         "description": "server.djangoapp.views",
-        "peekOfCode": "def get_dealer_details(request, dealer_id):\n    if(dealer_id):\n        endpoint = \"/fetchDealer/\"+str(dealer_id)\n        dealership = get_request(endpoint)\n        return JsonResponse({\"status\":200,\"dealer\":dealership})\n    else:\n        return JsonResponse({\"status\":400,\"message\":\"Bad Request\"})\n# Create a `add_review` view to submit a review\n# def add_review(request):\ndef add_review(request):",
+        "peekOfCode": "def get_dealer_details(request,dealer_id):\n    \"\"\"\n    This view handles fetching details of a dealer from the database microservice\n    \"\"\"\n    if dealer_id:\n        endpoint = \"/fetchDealer/\"+str(dealer_id)\n        dealership = get_request(endpoint)\n        return JsonResponse({\"status\":200,\"dealer\":dealership})\n    return JsonResponse({\"status\":400,\"message\":\"Bad Request\"})\n# Create a `add_review` view to submit a review",
         "detail": "server.djangoapp.views",
         "documentation": {}
     },
@@ -513,7 +496,7 @@
         "kind": 2,
         "importPath": "server.djangoapp.views",
         "description": "server.djangoapp.views",
-        "peekOfCode": "def add_review(request):\n    if(request.user.is_anonymous == False):\n        data = json.loads(request.body)\n        try:\n            response = post_review(data)\n            return JsonResponse({\"status\":200})\n        except:\n            return JsonResponse({\"status\":401,\"message\":\"Error in posting review\"})\n    else:\n        return JsonResponse({\"status\":403,\"message\":\"Unauthorized\"})",
+        "peekOfCode": "def add_review(request):\n    \"\"\"\n    This view handles posting reviews to the database microservice\n    \"\"\"\n    if not request.user.is_anonymous:\n        data = json.loads(request.body)\n        try:\n            post_review(data)\n            return JsonResponse({\"status\":200})\n        except requests.exceptions.RequestException :",
         "detail": "server.djangoapp.views",
         "documentation": {}
     },
@@ -522,7 +505,7 @@
         "kind": 2,
         "importPath": "server.djangoapp.views",
         "description": "server.djangoapp.views",
-        "peekOfCode": "def get_cars(request):\n    initiate()\n    car_models = CarModel.objects.select_related('car_make')\n    cars = []\n    for car_model in car_models:\n        cars.append({\"CarModel\": car_model.name, \"CarMake\": car_model.car_make.name})\n    return JsonResponse({\"CarModels\":cars})",
+        "peekOfCode": "def get_cars(request):\n    \"\"\"\n    This view handles fetching cars from the database microservice\n    \"\"\"\n    initiate()\n    car_models = CarModel.objects.select_related('car_make')\n    cars = []\n    for car_model in car_models:\n        cars.append({\"CarModel\": car_model.name, \"CarMake\": car_model.car_make.name})\n    return JsonResponse({\"CarModels\":cars})",
         "detail": "server.djangoapp.views",
         "documentation": {}
     },
@@ -531,7 +514,7 @@
         "kind": 5,
         "importPath": "server.djangoapp.views",
         "description": "server.djangoapp.views",
-        "peekOfCode": "logger = logging.getLogger(__name__)\n# Create your views here.\n# Create a `login_request` view to handle sign in request\n@csrf_exempt\ndef login_user(request):\n    # Get username and password from request.POST dictionary\n    data = json.loads(request.body)\n    username = data['userName']\n    password = data['password']\n    # Try to check if provide credential can be authenticated",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n# Create your views here.\n# Create a `login_request` view to handle sign in request\n@csrf_exempt\ndef login_user(request):\n    \"\"\"\n    This view handles login requests\n    \"\"\"\n    # Get username and password from request.POST dictionary\n    data = json.loads(request.body)",
         "detail": "server.djangoapp.views",
         "documentation": {}
     },
@@ -621,7 +604,7 @@
         "kind": 5,
         "importPath": "server.djangoproj.settings",
         "description": "server.djangoproj.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY =\\\n    'django-insecure-ccow$tz_=9%dxu4(0%^(z%nx32#s@(zt9$ih@)5l54yny)wm-0'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\n    'localhost','127.0.0.1','boluwajimaxw-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/'",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY =\\\n    'django-insecure-ccow$tz_=9%dxu4(0%^(z%nx32#s@(zt9$ih@)5l54yny)wm-0'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\n    'localhost',",
         "detail": "server.djangoproj.settings",
         "documentation": {}
     },
@@ -630,7 +613,7 @@
         "kind": 5,
         "importPath": "server.djangoproj.settings",
         "description": "server.djangoproj.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\n    'localhost','127.0.0.1','boluwajimaxw-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/'\n]\nCSRF_TRUSTED_ORIGINS = [\n    'http://localhost','https://boluwajimaxw-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/'\n]\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [],\n}",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n    'boluwajimaxw-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/'\n]\nCSRF_TRUSTED_ORIGINS = [\n    'http://localhost',\n    'https://boluwajimaxw-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.'\n    +'proxy.cognitiveclass.ai/'",
         "detail": "server.djangoproj.settings",
         "documentation": {}
     },
@@ -639,7 +622,7 @@
         "kind": 5,
         "importPath": "server.djangoproj.settings",
         "description": "server.djangoproj.settings",
-        "peekOfCode": "ALLOWED_HOSTS = [\n    'localhost','127.0.0.1','boluwajimaxw-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/'\n]\nCSRF_TRUSTED_ORIGINS = [\n    'http://localhost','https://boluwajimaxw-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/'\n]\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [],\n}\n# Application definition",
+        "peekOfCode": "ALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n    'boluwajimaxw-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/'\n]\nCSRF_TRUSTED_ORIGINS = [\n    'http://localhost',\n    'https://boluwajimaxw-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.'\n    +'proxy.cognitiveclass.ai/'\n]",
         "detail": "server.djangoproj.settings",
         "documentation": {}
     },
@@ -648,7 +631,7 @@
         "kind": 5,
         "importPath": "server.djangoproj.settings",
         "description": "server.djangoproj.settings",
-        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    'http://localhost','https://boluwajimaxw-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/'\n]\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [],\n}\n# Application definition\nINSTALLED_APPS = [\n    'djangoapp.apps.DjangoappConfig',\n    'django.contrib.admin',",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    'http://localhost',\n    'https://boluwajimaxw-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.'\n    +'proxy.cognitiveclass.ai/'\n]\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [],\n}\n# Application definition\nINSTALLED_APPS = [",
         "detail": "server.djangoproj.settings",
         "documentation": {}
     },

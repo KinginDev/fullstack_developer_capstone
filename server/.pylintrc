@@ -1,0 +1,17 @@
+[MASTER]
+load-plugins = pylint_django
+
+[MESSAGES CONTROL]
+# Disable some Pylint messages that are not relevant for Django projects
+disable = 
+    C0111, # Missing docstring
+    C0103, # Variable name doesn't conform to snake_case naming style
+    R0903, # Too few public methods
+    R0904, # Too many public methods
+    W0201, # Attribute defined outside __init__
+    E1101, # No member (fix for Django ORM)
+    E0401, # Import error
+    W0613, # Unused argument
+    W0612, # Unused variable
+    C0415,
+    E5110,
